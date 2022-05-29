@@ -44,3 +44,9 @@ Note you can change the file type if you wanted an avi/mov/mkv or some other for
  
  ### bitrate (crf alternative I think)
  `-b:v 1M`
+
+## Audio to Video with a plain color
+
+```
+ffmpeg -f lavfi -i color=c=blue:s=1280x720 -i input.mp3 -shortest -fflags +shortest output.mp4
+```
